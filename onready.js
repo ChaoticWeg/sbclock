@@ -1,0 +1,6 @@
+$(() => {
+
+    Clock.init();
+    Tagline.init();
+
+});

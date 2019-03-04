@@ -6,14 +6,17 @@
         <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 
         <!-- scripts -->
+        <script type="text/javascript" src="scripts/assets/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/assets/tagline-utils.js"></script>
         <script type="text/javascript" src="scripts/util.js"></script>
-        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/tagline.js"></script>
+        <script type="text/javascript" src="scripts/respring-timer.js"></script>
         <script type="text/javascript" src="scripts/clock.js"></script>
-        <script type="text/javascript" src="scripts/minSinceLastRespring.js"></script>
+        <script type="text/javascript" src="onready.js"></script>
 
         <!-- meta tags -->
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- do we even need this? -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta charset="utf-8"/>
     </head>
     <body>
@@ -24,12 +27,10 @@
                 <span class="separator">:</span>
                 <span id="minutes">xx</span>
             </div>
-            <div class="justRespringed">
-                Damn it! Respring.
-            </div>
-            <div class="respringMin" style="display:none">
+            <div class="respringMin">
                 <span id="respringMin">xx</span> minute<span id="respringMinPlural"></span> since the last respring
             </div>
+            <div class="tagline"></div>
         </div>
     </body>
 </html>

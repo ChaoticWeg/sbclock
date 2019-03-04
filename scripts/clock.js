@@ -1,27 +1,32 @@
-/**
- * Update the clock.
- */
-function updateClock() {
-    // grab a new Date object
-    let now = new Date();
+let Clock = (() => {
 
-    // set hours and minutes
-    displayNumber('.clock #hours', now.getHours());
-    displayNumber('.clock #minutes', now.getMinutes());
+    let exposed = {};
 
-    // flash separators
-    toggleVisibility('.separator');
-}
+    /**
+     * Update the clock.
+     */
+    let updateClock = () => {
+        // grab a new Date object
+        let now = new Date();
 
-/**
- * Function called when document ready event is fired.
- * Performs first update, then schedules an update for every quarter-second.
- * This might drain battery and may be changed after some testing.
- */
-function onReady() {
-    updateClock();
-    setInterval(updateClock, 500);
-}
+        // set hours and minutes
+        Utils.displayNumber('.clock #hours', now.getHours());
+        Utils.displayNumber('.clock #minutes', now.getMinutes());
 
-// register document ready handler
-$(onReady);
+        // flash separators
+        Utils.toggleVisibility('.separator');
+    }
+
+    /**
+     * Function called when document ready event is fired.
+     * Performs first update, then schedules an update for every quarter-second.
+     * This might drain battery and may be changed after some testing.
+     */
+    exposed.init = () => {
+        updateClock();
+        setInterval(updateClock, 500);
+    }
+
+    return exposed;
+
+})();

@@ -7,11 +7,6 @@ function updateMin(initial) {
     let diff = new Date(new Date() - initial);
     let min = diff.getMinutes();
 
-    // fade into "x minutes since last respring" after 1 minute
-    if (min >= 1 && $('.justRespringed').is(':visible')) {
-        fadeInto('.justRespringed', '.respringMin');
-    }
-
     // update respring minutes text
     $('#respringMin').text(min);
 

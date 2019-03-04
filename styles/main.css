@@ -10,8 +10,8 @@
     background-color: var(--transparent);
     color: var(--white);
     
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    text-shadow: 2px 2px 2px var(--black);
 
     height: 175px;
     padding: 25px;
@@ -24,7 +24,7 @@
     font-family: 'Rock Salt', cursive;
 }
 
-.justRespringed, .respringMin {
+.tagline, .respringMin {
     font-size: 1.5em;
     font-family: 'Bangers', sans-serif;
 }
