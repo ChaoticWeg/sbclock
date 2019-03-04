@@ -3,7 +3,7 @@
 @REM xcopy to stage files for deployment
 if not exist ".\staging" mkdir staging
 echo staging files for deployment...
-robocopy . .\staging /e /purge /xo /xd staging .git .vscode /xf LICENSE .gitignore deploy.bat 1>NUL
+robocopy . .\staging /e /purge /xo /xd staging .git .vscode /xf LICENSE .gitignore deploy.bat serve.py 1>NUL
 
 @REM scp to put files
 echo deploying files...
