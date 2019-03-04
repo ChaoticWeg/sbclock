@@ -1,0 +1,10 @@
+.layout {
+    background-color: rgba(255, 255, 255, 255);
+    color: rgba(0, 0, 0, 255);
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+    height: 200px;
+    padding: 20px;
+}
