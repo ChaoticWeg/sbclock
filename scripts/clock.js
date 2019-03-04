@@ -5,7 +5,9 @@ function updateClock() {
     // grab a new Date object
     let now = new Date();
 
-    // set hours, minutes, and seconds
+    // set hours and minutes
+    displayNumber('.clock #hours', now.getHours());
+    displayNumber('.clock #minutes', now.getMinutes());
 
     // flash separators
     toggleVisibility('.separator');
@@ -18,7 +20,7 @@ function updateClock() {
  */
 function onReady() {
     updateClock();
-    setInterval(updateClock, 250);
+    setInterval(updateClock, 500);
 }
 
 // register document ready handler
