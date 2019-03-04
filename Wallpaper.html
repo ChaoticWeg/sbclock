@@ -8,6 +8,7 @@
         <!-- scripts -->
         <script type="text/javascript" src="scripts/util.js"></script>
         <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/clock.js"></script>
         <script type="text/javascript" src="scripts/minSinceLastRespring.js"></script>
 
         <!-- meta tags -->
@@ -22,11 +23,12 @@
                 <span id="hours">xx</span>
                 <span class="separator">:</span>
                 <span id="minutes">xx</span>
-                <span class="separator">:</span>
-                <span id="seconds">xx</span>
             </div>
-            <div class="respringMin">
-                <span id="respringMin">xx</span> minute<span id="respringMinPlural">s</span> since the last respring
+            <div class="justRespringed">
+                Damn it! Respring.
+            </div>
+            <div class="respringMin" style="display:none">
+                <span id="respringMin">xx</span> minute<span id="respringMinPlural"></span> since the last respring
             </div>
         </div>
     </body>
