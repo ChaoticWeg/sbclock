@@ -1,0 +1,5 @@
+# staging and deployment
+.vscode/
+staging/
+deploy.bat
+respring.txt
