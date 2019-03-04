@@ -2,17 +2,32 @@
 
 <html>
     <head>
+        <!-- stylesheets -->
         <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+
+        <!-- scripts -->
+        <script type="text/javascript" src="scripts/util.js"></script>
         <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/minSinceLastRespring.js"></script>
+
+        <!-- meta tags -->
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- do we even need this? -->
         <meta charset="utf-8"/>
     </head>
     <body>
-        <title>SBClock</title>
-
+        <title>sbclock</title>
         <div class="layout">
-            <h1>Hello, SBHTML!</h1>
+            <div class="clock">
+                <span id="hours">xx</span>
+                <span class="separator">:</span>
+                <span id="minutes">xx</span>
+                <span class="separator">:</span>
+                <span id="seconds">xx</span>
+            </div>
+            <div class="respringMin">
+                <span id="respringMin">xx</span> minute<span id="respringMinPlural">s</span> since the last respring
+            </div>
         </div>
     </body>
 </html>
