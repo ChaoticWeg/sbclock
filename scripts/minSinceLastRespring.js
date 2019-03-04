@@ -7,21 +7,17 @@ function updateMin(initial) {
     let diff = new Date(new Date() - initial);
     let min = diff.getMinutes();
 
+    // fade into "x minutes since last respring" after 1 minute
+    if (min >= 1 && $('.justRespringed').is(':visible')) {
+        fadeInto('.justRespringed', '.respringMin');
+    }
+
     // update respring minutes text
     $('#respringMin').text(min);
 
-    // control plurality (minute vs minutes)
-    if (min == 1) {
-        // hide if 1 minute but it says "1 minutes"
-        if ($('#respringMinPlural').is(':visible')) {
-            $('#respringMinPlural').hide();
-        }
-    } else {
-        // show if x minutes but it says "x minute"
-        if (!$('#respringMinPlural').is(':visible')) {
-            $('#respringMinPlural').show();
-        }
-    }
+    // should this be plural?
+    let plurality = min == 1 ? '' : 's';
+    $('#respringMinPlural').text(plurality);
 }
 
 /**
