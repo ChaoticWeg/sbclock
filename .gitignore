@@ -1,6 +1,3 @@
 # staging and deployment
 .vscode/
 staging/
-
-# live preview using python
-serve.py
