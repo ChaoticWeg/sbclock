@@ -3,10 +3,11 @@
 :root {
     --white: rgba(255, 255, 255, 255);
     --black: rgba(0, 0, 0, 255);
+    --transparent: rgba(0, 0, 0, 0);
 }
 
 .layout {
-    background-color: var(--black);
+    background-color: var(--transparent);
     color: var(--white);
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
