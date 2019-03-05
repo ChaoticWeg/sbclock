@@ -14,7 +14,7 @@ let Clock = (() => {
         Utils.displayNumber('.clock #minutes', now.getMinutes());
 
         // flash separators
-        Utils.toggleVisibility('.separator');
+        // Utils.toggleVisibility('.separator');
     }
 
     /**

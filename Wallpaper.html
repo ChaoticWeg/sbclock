@@ -5,14 +5,23 @@
         <!-- stylesheets -->
         <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 
-        <!-- scripts -->
+        <!-- script assets and utilities -->
         <script type="text/javascript" src="scripts/assets/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/assets/lodash.min.js"></script>
         <script type="text/javascript" src="scripts/assets/tagline-utils.js"></script>
         <script type="text/javascript" src="scripts/util.js"></script>
+
+        <!-- actionable scripts -->
         <script type="text/javascript" src="scripts/tagline.js"></script>
         <script type="text/javascript" src="scripts/clock.js"></script>
-        <script type="text/javascript" src="scripts/xeninfo/status.js"></script>
-        <script type="text/javascript" src="scripts/xeninfo/shim.js"></script>
+
+        <!-- XenInfo integration -->
+        <script type="text/javascript" src="scripts/xeninfo/events.js"></script>
+        <script type="text/javascript" src="scripts/xeninfo/handlers/system.js"></script>
+        <script type="text/javascript" src="scripts/xeninfo/handlers/battery.js"></script>
+        <script>function mainUpdate(t){EventRegistry.invoke(t);}</script>
+
+        <!-- what to do when document is ready -->
         <script type="text/javascript" src="onready.js"></script>
 
         <!-- meta tags -->
@@ -29,7 +38,10 @@
                 <span id="minutes">xx</span>
             </div>
             <div class="tagline"></div>
-            <div class="info"></div>
+            <div class="info">
+                <div class="info-column text-right" id="info-device">Device name</div>
+                <div class="info-column text-left" id="info-battery">Battery level</div>
+            </div>
         </div>
     </body>
 </html>
